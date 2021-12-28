@@ -1,4 +1,4 @@
-# Pandas
+# 🐼 Pandas
 
 Para começar a utilizar a biblioteca pandas é necessário, primeiramente, importar e para isso podemos usar o código:
 
