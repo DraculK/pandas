@@ -1,5 +1,6 @@
 # 🐼 Pandas
 
+
 Para começar a utilizar a biblioteca pandas é necessário, primeiramente, importar e para isso podemos usar o código:
 
 ```python
@@ -87,9 +88,9 @@ maior_que_um = list(filter(lambda x: x>1, numeros))
 
 - **List Comprehension:** é uma lista, mas no lugar de ser declarada literalmente, servimos uma expressão para a construção dessa lista.
     
-    [expressão for valor in coleção], é a forma mais básica da list comprehension.
+    [**expressão** for **valor** in **coleção**], é a forma mais básica da list comprehension.
     
-    [expressão for valor in coleção if algo], caso queiramos adicionar condicionais para a criação de uma list comprehension.
+    [**expressão** for **valor** in **coleção** if **algo**], caso queiramos adicionar condicionais para a criação de uma list comprehension.
     
 
 ```python
@@ -133,4 +134,42 @@ resultado = list(zip(dic_1, dic_2.values()))
 lista = ['C', 'GoLang', 'Python']
 resultado = list(enumerate(lista))
 # resultado = [(0, 'C'), (1, 'GoLang'), (2, 'Python')]
+```
+
+---
+
+### Erros e Exceções
+
+Erros estão, geralmente, ligados à erros de sintaxes que podem ocorrer durante a execução de um código, tal qual:
+
+```python
+while True
+	print('oi')
+```
+
+Esse código resultará em um erro, pois faltam os dois pontos (:) depois do **True**.
+
+Já no carro de exceções, isso se dá por causa de algum problema em uma regra que não foi prevista de maneira adequada, como uma divisão por 0, por exemplo.
+
+Para esses problemas, temos o **try/except**, que nos permite manejar possíveis erros que podem ocorrer durante a criação de um código.
+
+```python
+try:
+    print(2/0)
+except:
+    print('Operação inválida!')
+# caso não consiga dividir por 0, o except será executado
+
+while True:
+    try:
+        num = int(input("Digite um número: "))
+    except:
+        print("Você não digitou um número.")
+        continue
+    else:
+        print("Obrigado por digitar um número!")
+        break
+    finally:
+        print("Fim da execução.")
+print("O número digitado foi " + str(num))
 ```
